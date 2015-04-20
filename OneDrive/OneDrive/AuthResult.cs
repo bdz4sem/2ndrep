@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace OneDrive
 {
-    class AuthResult
+    public class AuthResult
     {
         public AuthResult(Uri resultUri)
         {
@@ -19,7 +19,6 @@ namespace OneDrive
                 {
                     case "code":
                         this.AuthorizeCode = kvp[1];
-                        MessageBox.Show("Auth Completed", this.AuthorizeCode);
                         break;
                     case "error":
                         this.ErrorCode = kvp[1];
